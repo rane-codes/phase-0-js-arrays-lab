@@ -1,4 +1,4 @@
-let products = ["Laptop", "Phone", "Headphones", "Monitor"];
+const products = ["Laptop", "Phone", "Headphones", "Monitor"];
 
 function logFirstProduct() {
   console.log(products[0]);
@@ -9,15 +9,17 @@ function addProduct(productName) {
 }
 
 function updateProductName(position, newName) {
-  products[position] = newName ;
+  products[position] = newName;
 }
 
 function removeLastProduct() {
   products.pop();
 }
 
-addProduct("Tablet");
-updateProductName(1, "Smartphone");
-removeLastProduct();
-console.log(products);
-console.log("--------------------------------------------------");
+module.exports = {
+  products,
+  logFirstProduct,
+  addProduct,
+  updateProductName,
+  removeLastProduct,
+};
